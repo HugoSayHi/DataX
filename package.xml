@@ -25,7 +25,7 @@
         </fileSet>
 
         <!-- reader -->
-        <fileSet>
+       <!-- <fileSet>
             <directory>mysqlreader/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
@@ -165,10 +165,24 @@
                 <include>**/*.*</include>
             </includes>
             <outputDirectory>datax</outputDirectory>
+        </fileSet>-->
+
+        <fileSet>
+            <directory>impalareader/target/datax/</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+            <outputDirectory>datax</outputDirectory>
         </fileSet>
 
+
+
+
+
+
+
         <!-- writer -->
-        <fileSet>
+        <!--<fileSet>
             <directory>mysqlwriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
@@ -216,7 +230,7 @@
                 <include>**/*.*</include>
             </includes>
             <outputDirectory>datax</outputDirectory>
-        </fileSet>
+        </fileSet>-->
         <fileSet>
             <directory>streamwriter/target/datax/</directory>
             <includes>
@@ -224,7 +238,7 @@
             </includes>
             <outputDirectory>datax</outputDirectory>
         </fileSet>
-        <fileSet>
+        <!--<fileSet>
             <directory>otswriter/target/datax/</directory>
             <includes>
                 <include>**/*.*</include>
@@ -342,6 +356,9 @@
                 <include>**/*.*</include>
             </includes>
             <outputDirectory>datax</outputDirectory>
-        </fileSet>
+        </fileSet>-->
+
+
+
     </fileSets>
 </assembly>

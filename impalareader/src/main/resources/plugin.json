@@ -1,0 +1,6 @@
+{
+    "name": "impalareader",
+    "class": "com.alibaba.datax.plugin.reader.impalareader.ImpalaReader",
+    "description": "useScene: prod. mechanism: via FileSystem connect HDFS write data concurrent.",
+    "developer": "alibaba"
+}
