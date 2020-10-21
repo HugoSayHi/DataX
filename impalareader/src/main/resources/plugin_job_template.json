@@ -1,8 +1,14 @@
 {
     "name": "impalareader",
     "parameter": {
-        "jdbcUrl": "",
-        "table": "",
-        "column": []
+        "username": "",
+        "password": "",
+        "connection": [
+            {
+                "jdbcUrl": "",
+                "querySql": ""
+            }
+        ]
+
     }
 }
