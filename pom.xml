@@ -45,7 +45,7 @@
         <module>transformer</module>
 
         <!-- reader -->
-        <!--<module>mysqlreader</module>-->
+        <module>mysqlreader</module>
         <!--<module>drdsreader</module>-->
         <!--<module>sqlserverreader</module>-->
         <!--<module>postgresqlreader</module>-->
@@ -59,7 +59,7 @@
         <!--<module>ossreader</module>-->
         <!--<module>ftpreader</module>-->
         <!--<module>mongodbreader</module>-->
-        <!--<module>rdbmsreader</module>-->
+        <module>rdbmsreader</module>
         <!--<module>hbase11xreader</module>-->
         <!--<module>hbase094xreader</module>-->
         <!--<module>opentsdbreader</module>-->

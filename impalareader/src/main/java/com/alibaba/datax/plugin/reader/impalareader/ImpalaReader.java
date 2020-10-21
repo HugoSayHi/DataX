@@ -5,6 +5,7 @@ import com.alibaba.datax.common.element.StringColumn;
 import com.alibaba.datax.common.plugin.RecordSender;
 import com.alibaba.datax.common.spi.Reader;
 import com.alibaba.datax.common.util.Configuration;
+import com.alibaba.datax.plugin.rdbms.reader.Key;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +33,7 @@ public class ImpalaReader extends Reader {
      * Job类post-->destroy
      * </pre>
      */
+
 
 
     public static class Job extends Reader.Job {
@@ -67,12 +69,18 @@ public class ImpalaReader extends Reader {
 
     public static class Task extends Reader.Task {
 
+        private static final Logger log = LoggerFactory.getLogger(Task.class);
+
         private ImpalaJdbc jdbc = null;
         Configuration config = null;
 
         @Override
         public void startRead(RecordSender recordSender) {
 
+            String querySql = config.getString(Key.QUERY_SQL);
+
+            log.debug("imaplareader querySql is {}", querySql);
+            jdbc.executeQuery(querySql);
 
             Record record = recordSender.createRecord();
             record.addColumn(new StringColumn("tt"));
@@ -84,8 +92,8 @@ public class ImpalaReader extends Reader {
         @Override
         public void init() {
             config = this.getPluginJobConf();
-            String jdbcUrl = config.getString("jdbcUrl");
-
+            String jdbcUrl = config.getString(Key.JDBC_URL);
+            log.debug("imaplareader jdbcUrl is {}", jdbcUrl);
             jdbc = new ImpalaJdbc(jdbcUrl);
         }
 
